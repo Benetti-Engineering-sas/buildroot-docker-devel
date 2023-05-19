@@ -75,6 +75,10 @@ RUN useradd -ms /bin/bash br-user
 RUN echo "alias ls='ls --color=auto'" >> /home/br-user/.bashrc
 RUN echo "PS1='\u@\H [\w]$ '" >> /home/br-user/.bashrc
 RUN chown -R br-user:br-user /home/br-user
+#  Add new user docker to sudo group
+RUN adduser br-user sudo
+RUN echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> \
+/etc/sudoers
 
 COPY brmake /usr/bin
 
