@@ -4,7 +4,7 @@ MAINTAINER Adam Duskett <aduskett@gmail.com>
 LABEL maintainer="Adam Duskett <aduskett@gmail.com>" \
 description="Container with everything needed to run Buildroot"
 
-ENV DEBIAN_FRONTEND=noninteractive 
+ENV DEBIAN_FRONTEND=noninteractive
 ENV TZ=US/Pacific
 
 RUN set -e; \
